@@ -111,6 +111,7 @@ class MoviNet(nn.Module):
         x = self.block_5(x)
         x = self.block_6(x)
         x = self.conv_7(x)
+        print(x.shape)
         x = nn.ReLU(self.pool_8(x))
         x = x.view(1, -1)
         x = nn.ReLU(self.dense_9(x))
