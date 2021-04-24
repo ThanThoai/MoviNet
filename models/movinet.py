@@ -105,6 +105,7 @@ class MoviNet(nn.Module):
     def forward(self, x):
 
         x = self.conv_1(x)
+        print(x.shape)
         x = self.block_2(x)
         x = self.block_3(x)
         x = self.block_4(x)
